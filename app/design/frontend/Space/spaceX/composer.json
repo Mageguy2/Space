@@ -1,0 +1,20 @@
+{
+    "name": "space/theme-frontend-core",
+    "description": "LESS theme Magento 2 project builds",
+    "type": "magento2-theme",
+    "license": "proprietary",
+    "require": {
+		"magento/theme-frontend-luma": "*"
+    },
+    "authors": [
+        {
+            "name": "Space Theme",
+            "homepage": "https://space-themes.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ]
+    }
+}
