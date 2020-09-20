@@ -1,15 +1,18 @@
 {
-    "name": "Space/spaceX",
-    "description": "LESS theme Magento 2 project builds",
+    "name": "space/spaceX",
+    "description": "N/A",
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": "~7.2.0||~7.3.0",
+        "magento/framework": "*",
+        "magento/theme-frontend-blank": "*"
+    },
     "type": "magento2-theme",
-    "license": "proprietary",
-    "require": {},
-    "minimum-stability": "dev",
-    "authors": [
-        {
-            "name": "Space Theme",
-            "homepage": "https://space-themes.com"
-        }
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
     ],
     "autoload": {
         "files": [
