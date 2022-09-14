@@ -1,0 +1,81 @@
+// /**
+//  *  Copyright © Span ApS, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Common (styles-m.css)
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .product-info-container {
+        .lib-vendor-prefix-display(flex);
+        .lib-vendor-prefix-flex-direction(column);
+        margin: 0 -15px;
+        
+        .product.media,
+        .product-info-main,
+        .product.info.detailed {
+            padding: 0 15px;
+        }
+    }
+
+    .product.media {
+        .towishlist {
+            .lib-icon-font(
+                @icon-wishlist-empty,
+                @_icon-font-color: @color-black,
+                @_icon-font-size: 34px,
+                @_icon-font-line-height: 40px
+            );
+
+            > span {
+                .lib-visually-hidden();
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .product-info-container {
+         .lib-vendor-prefix-flex-direction(row);
+    }
+
+    .catalog-product-view { 
+        .product-info-main {
+            width: 33.33%;
+        }
+
+        .product.info.detailed {
+            width: 33.33%;
+        }
+    }
+
+    .product.info.detailed,
+    .product-info-main {
+        .lib-css(position, sticky, 1);
+        top: 25px;
+        align-self: flex-start;
+    }
+
+    .product.media {
+        .lib-vendor-prefix-display(flex);
+
+        .towishlist {
+            .lib-css(position, sticky, 1);
+            .lib-vendor-prefix-order(3);
+            top: 25px;
+            align-self: flex-start;
+
+            > span {
+                .lib-visually-hidden();
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .product.info.detailed {
+        order: 3;
+    }
+}
